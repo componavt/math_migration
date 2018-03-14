@@ -127,14 +127,14 @@ for t in thlist:
 
    #print(fun21,fun22,fun23,fun24)
 
-   #print(fun31,fun32,fun33,fun34)
+   
    print(x,y)
 #function graph
+  
 plt.plot(thlist, xlist, "b-", )
 plt.plot(thlist, ylist, "g-",) 
 plt.xlabel('t')
 plt.ylabel('y')
 plt.legend(['x(t)', 'y(t)'], loc = 'central')
 plt.grid()
-plt.show() 
-
+plt.show()   
