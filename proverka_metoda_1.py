@@ -56,12 +56,14 @@ def detest(testkey):#Description of problem
       import numpy as np
       ivpoptim=IVPOPTIM()
       if testkey=='Differential equation':#differential equation with parameter a0 which is not (-1)      
+        print('\nDifferential equation -----')
         ivpoptim.u0=u0#initial value
         ivpoptim.T=3.0#Final time of integration
         ivpoptim.rhs =lambda t,u:a0*u  #right side of ODE 
         ivpoptim.dt0 = 0.01#time step
        
       elif testkey=='Differential equation1':# differential equation with parameter changed by an amount dq
+        print('\n1 Differential equation 1 -----')
         ivpoptim.u0=u0#initial value
         ivpoptim.T=3.0#Final time of integration
         ivpoptim.rhs =lambda t,u: (a0+dq)*u
@@ -69,6 +71,7 @@ def detest(testkey):#Description of problem
       
                     
       elif testkey=='Differential equation11':#differential equation with parameter changed by an amount 2dq
+         print('\n2 Differential equation 2 -----')
          ivpoptim.u0=u0#initial value
          ivpoptim.T=3.0#Final time of integration
          ivpoptim.rhs = lambda t,u: (a0+2*dq)*u
